@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  max-width: 1650px;
+}
+header {
+  position: relative;
+  top: 0px;
+  width: 80%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+.content {
+  width: 80%;
+  max-width: 1380px;
+  margin: 0 auto;
+  background-color: violet;
+}
+.header {
+  top: 0px;
+  width: 80%;
+  position: fixed;
+  background-color: blue;
+}
+.menu {
+  background-color: yellow;
+  position: absolute;
+  right: 20px;
+}
+.menuElements {
+  display: flex;
+  justify-content: flex-end;
+}
+.menuEl {
+  display: flex;
+  padding: 0 10px 0 10px;
+}
+.menuEl a:hover {
+  color: yellowgreen;
+}
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    font-size: 4em;
+    font-weight: 600;
+  }
+}
