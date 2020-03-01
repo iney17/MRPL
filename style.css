@@ -28,7 +28,6 @@ header {
   background-image: url(./img/fon_hf2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  overflow-y: hidden;
 }
 .menu {
   right: 20px;
@@ -56,6 +55,9 @@ header {
 }
 
 @media (max-width: 991px) {
+  .header {
+    overflow-y: hidden;
+  }
   .mobile-menu {
     display: block;
     position: fixed;
@@ -90,6 +92,9 @@ header {
   }
 }
 @media (min-width: 992px) {
+  .header {
+    overflow-y: visible;
+  }
   .header__stick {
     position: sticky;
     top: 0px;
