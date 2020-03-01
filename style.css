@@ -6,7 +6,9 @@
 body {
   width: 100%;
   max-width: 1650px;
+  min-width: 280px;
 }
+/*шапка и меню*/
 header {
   top: 0px;
   width: 80%;
@@ -23,10 +25,10 @@ header {
   background-size: 100%;
 }
 .header {
-  top: 0px;
   background-image: url(./img/fon_hf2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow-y: hidden;
 }
 .menu {
   right: 20px;
@@ -41,9 +43,13 @@ header {
   display: flex;
   padding: 0 10px 0 10px;
 }
-
+.menuEl a {
+  color: #000;
+  font-size: larger;
+  text-decoration: none;
+}
 .menuEl a:hover {
-  color: yellowgreen;
+  color: rgb(205, 107, 50);
 }
 .mobile-menu {
   display: none;
@@ -74,16 +80,13 @@ header {
     position: fixed;
     top: 10%;
   }
-  .header__deskription {
-    display: none;
-  }
 }
 @media (max-width: 740px) {
   .header {
-    top: 0px;
-    background-image: url(./img/fon_hf2.jpg) !important;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    min-width: 280px;
+  }
+  .countdown-time {
+    padding: 0px !important;
   }
 }
 @media (min-width: 992px) {
@@ -91,6 +94,7 @@ header {
     position: sticky;
     top: 0px;
     display: flex;
+    background-color: rgba(255, 255, 255, 0.301);
   }
   .header__countdown {
     margin-top: 11em;
@@ -104,7 +108,39 @@ header {
   color: white;
   text-align: center;
 }
-
+.fonheader {
+  background-image: url(./img/fon_hf3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 25px;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 450px) {
+  .fonheader {
+    min-height: 25px;
+  }
+}
+@media (min-width: 451px) and (max-width: 543px) {
+  .fonheader {
+    min-height: 30px;
+  }
+}
+@media (min-width: 544px) and (max-width: 679px) {
+  .fonheader {
+    min-height: 40px;
+  }
+}
+@media (min-width: 680px) {
+  .fonheader {
+    background-repeat: repeat-x !important;
+    min-height: 50px !important;
+    background-size: contain;
+  }
+  .countdown-title {
+    background-color: #3c9ee03b;
+  }
+}
 /* Счётчик*/
 .countdown-title {
   color: rgb(255, 255, 255);
@@ -136,4 +172,13 @@ header {
   display: block;
   padding-top: 5px;
   font-size: 16px;
+}
+
+/* контент */
+.fonheader {
+}
+@media (min-width: 991px) {
+  .content__text {
+    height: 400px;
+  }
 }
