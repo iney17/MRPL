@@ -3,10 +3,12 @@
 *::before {
   box-sizing: inherit;
 }
+
 body {
   width: 100%;
   max-width: 1650px;
   min-width: 280px;
+  font-family: "Open Sans";
 }
 /*шапка и меню*/
 header {
@@ -15,15 +17,7 @@ header {
   max-width: 1380px;
   margin: 0 auto;
 }
-.content {
-  display: block;
-  width: 80%;
-  max-width: 1380px;
-  margin: 0 auto;
-  background-image: url(./img/fon.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 .header {
   background-image: url(./img/fon_hf2.jpg);
   background-repeat: no-repeat;
@@ -180,10 +174,27 @@ header {
 }
 
 /* контент */
-.fonheader {
+.content {
+  display: block;
+  width: 80%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+.content__span {
+  font-size: large;
+  color: #000;
+  background-color: #f5deb38a;
+}
+.content__description {
+  background-image: url(./img/fon.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  padding: 10% 5% 10% 5%;
+  background-size: cover;
 }
 @media (min-width: 991px) {
-  .content__text {
-    height: 400px;
+  .content__span {
+    font-size: 1.5em;
   }
 }
