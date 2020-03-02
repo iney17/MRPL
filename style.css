@@ -77,12 +77,10 @@ header {
     top: 10%;
   }
 }
+
 @media (max-width: 740px) {
   .header {
     min-width: 280px;
-  }
-  .countdown-time {
-    padding: 0px !important;
   }
 }
 @media (min-width: 992px) {
@@ -159,7 +157,7 @@ header {
 }
 .countdown {
   font-family: sans-serif;
-  color: #fff;
+  color: rgb(0, 0, 0);
   display: inline-block;
   font-weight: 100;
   text-align: center;
@@ -174,13 +172,19 @@ header {
 .countdown-time {
   padding: 10px;
   border-radius: 3px;
-  background: #3788d3;
+  background: #ffffff;
   display: inline-block;
+}
+@media (max-width: 315px) {
+  .countdown-time {
+    padding: 3px !important;
+  }
 }
 .countdown-text {
   display: block;
   padding-top: 5px;
   font-size: 16px;
+  color: #000;
 }
 
 /* контент */
