@@ -6,20 +6,20 @@
 
 body {
   width: 100%;
-  max-width: 1650px;
+  max-width: 1380px;
+  margin: 0 auto !important;
   min-width: 280px;
   font-family: "Open Sans";
 }
 /*шапка и меню*/
 header {
   top: 0px;
-  width: 80%;
   max-width: 1380px;
   margin: 0 auto;
 }
 
 .header {
-  background-image: url(./img/fon_hf2.jpg);
+  background-image: url(./img/fon_hf1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -37,12 +37,12 @@ header {
   padding: 0 10px 0 10px;
 }
 .menuEl a {
-  color: #000;
+  color: #fff;
   font-size: larger;
   text-decoration: none;
 }
 .menuEl a:hover {
-  color: rgb(205, 107, 50);
+  color: rgb(231, 0, 251);
 }
 .mobile-menu {
   display: none;
@@ -86,14 +86,24 @@ header {
   }
 }
 @media (min-width: 992px) {
+  body {
+    background-image: url(./img/fonbody.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+  }
+  .content {
+    width: 80%;
+  }
   .header {
     overflow-y: visible;
+    width: 80%;
+    margin: 0 auto;
   }
   .header__stick {
     position: sticky;
     top: 0px;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.301);
+    /*background-color: rgba(255, 255, 255, 0.301);*/
   }
   .header__countdown {
     margin-top: 11em;
@@ -108,7 +118,7 @@ header {
   text-align: center;
 }
 .fonheader {
-  background-image: url(./img/fon_hf3.jpg);
+  background-image: url(./img/fon_hf1.1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 25px;
@@ -176,7 +186,7 @@ header {
 /* контент */
 .content {
   display: block;
-  width: 80%;
+
   max-width: 1380px;
   margin: 0 auto;
 }
