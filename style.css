@@ -3,6 +3,9 @@
 *::before {
   box-sizing: inherit;
 }
+html {
+  scroll-behavior: smooth;
+}
 @media (max-width: 991px) {
   .modal-outer {
     display: grid;
