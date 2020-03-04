@@ -3,28 +3,29 @@
 *::before {
   box-sizing: inherit;
 }
-
-.modal-outer {
-  display: grid;
-  background: hsla(60, 0.7%, 27.3%, 0.7);
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
-.modal-outer img {
-  width: 100%;
-}
-.modal-outer.open {
-  opacity: 1;
-  pointer-events: all;
+@media (max-width: 991px) {
+  .modal-outer {
+    display: grid;
+    background: hsla(60, 0.7%, 27.3%, 0.7);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .modal-outer img {
+    width: 100%;
+  }
+  .modal-outer.open {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 body {
@@ -60,12 +61,12 @@ header {
   font-size: 20px;
 }
 .menuEl a {
-  color: #fff;
+  color: rgb(247, 243, 243);
   font-size: larger;
   text-decoration: none;
 }
 .menuEl a:hover {
-  color: rgb(231, 0, 251);
+  color: rgb(255, 255, 255);
 }
 .mobile-menu {
   display: none;
@@ -112,6 +113,10 @@ header {
   }
 }
 @media (min-width: 992px) {
+  .modal-outer {
+    opacity: 1;
+    background: none;
+  }
   body {
     background-image: url(./img/fonbody.jpg);
     background-repeat: repeat-y;
