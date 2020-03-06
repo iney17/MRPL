@@ -407,7 +407,7 @@ img {
 /*видео галлерея*/
 .carousel {
   padding: 0.3em 0.3em 0;
-  background: rgb(240, 240, 240);
+  background: rgba(51, 45, 51, 0.7);
   text-align: center;
 }
 .carousel div {
