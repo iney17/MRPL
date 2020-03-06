@@ -1,18 +1,23 @@
-const btn = document.querySelector("#menu"); //объявляем конст. для  кнопки в документе
-const modalOuter = document.querySelector(".modal-outer"); // объявляем конст. элемент класса .modal-outer
+const btn = document.querySelector("#menu"); //объявляем конст. для  кнопки меню в документе
+const modalOuter = document.querySelector(".modal-outer");
+let mobileMenu = document.querySelector(".mobile-menu");
 btn.addEventListener("click", openWindow);
 
 function openWindow(e) {
   const btn = e.currentTarget; //объявляем конст. Определяем элемент, который получил клик
 
   modalOuter.classList.add("open"); //добавляем класс к константе, получаем класс .modal-outer.open (и окно становится видимым)
+  btn.classList.add("open");
+  btn.innerHTML = `x`;
 }
 
 modalOuter.addEventListener("click", cloceWindow);
-
+mobileMenu.addEventListener("click", cloceWindow);
 function cloceWindow(e) {
   if (e.target.classList.contains("open")) {
     modalOuter.classList.remove("open");
+    btn.innerHTML = `<button id="menu-style">≡</button>`;
+    btn.classList.remove("open"); //чтобы вернуть первоначальные стили
   }
 }
 
