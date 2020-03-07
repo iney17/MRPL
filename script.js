@@ -65,7 +65,7 @@ let deadline = "2020-07-31";
 initializeClock("countdown", deadline);
 
 /*слайдер*/
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -77,9 +77,9 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -97,3 +97,35 @@ function showSlides(n) {
 }
 
 /* второй слайдер галлерея*/
+let slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+  showSlides2((slideIndex2 += n));
+}
+
+function currentSlide2(n) {
+  showSlides2((slideIndex2 = n));
+}
+
+function showSlides2(n) {
+  let i;
+  let slides2 = document.getElementsByClassName("mySlides2");
+  let dots2 = document.getElementsByClassName("demo2");
+  let captionText = document.getElementById("caption2");
+  if (n > slides2.length) {
+    slideIndex2 = 1;
+  }
+  if (n < 1) {
+    slideIndex2 = slides2.length;
+  }
+  for (i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = "none";
+  }
+  for (i = 0; i < dots2.length; i++) {
+    dots2[i].className = dots2[i].className.replace(" active2", "");
+  }
+  slides2[slideIndex2 - 1].style.display = "block";
+  dots2[slideIndex2 - 1].className += " active2";
+  captionText.innerHTML = dots2[slideIndex2 - 1].alt;
+}

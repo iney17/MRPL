@@ -36,6 +36,9 @@ html {
 }
 
 body {
+  background-image: url(./img/fonbody.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
   width: 100%;
   max-width: 1380px;
   margin: 0 auto !important;
@@ -126,11 +129,7 @@ header {
     opacity: 1;
     background: none;
   }
-  body {
-    background-image: url(./img/fonbody.jpg);
-    background-repeat: repeat-y;
-    background-size: 100%;
-  }
+
   .content {
     width: 80%;
   }
@@ -333,7 +332,7 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
+/* Caption text 
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -343,17 +342,8 @@ img {
   width: 100%;
   text-align: center;
 }
-
-/* Number text (1/3 etc) 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 */
-/* The dots/bullets/indicators */
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -407,7 +397,7 @@ img {
 /*видео галлерея*/
 .carousel {
   padding: 0.3em 0.3em 0;
-  background: rgba(51, 45, 51, 0.7);
+  background: #000000d9;
   text-align: center;
 }
 .carousel div {
@@ -477,3 +467,85 @@ img {
 }
 
 /*второй слайдер (галлерея)*/
+
+.container2 {
+  position: relative; /* Position the image container (needed to position the left and right arrows) */
+  background: #000000d9;
+  /*box-sizing: border-box;*/
+  border-top: outset 6px #73b8e6a1;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Hide the images by default */
+.mySlides2 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev2,
+.next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #d8aef05c;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev2:hover,
+.next2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container2 {
+  text-align: center;
+
+  padding: 2px 16px;
+  color: white;
+}
+/*.row {
+  background-color: #000000d9;
+}*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column2 {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo2 {
+  opacity: 0.6;
+}
+
+.active2,
+.demo2:hover {
+  opacity: 1;
+}
