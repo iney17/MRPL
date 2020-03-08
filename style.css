@@ -119,6 +119,7 @@ header {
     right: 20px;
     font-size: 4em;
     font-weight: 600;
+    z-index: 3;
   }
   .menu {
     /*display: none;*/
