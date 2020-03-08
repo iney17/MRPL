@@ -8,7 +8,7 @@ function openWindow(e) {
 
   modalOuter.classList.add("open"); //добавляем класс к константе, получаем класс .modal-outer.open (и окно становится видимым)
   btn.classList.add("open");
-  btn.innerHTML = `x`;
+  btn.innerHTML = `x`; //меняю кнопку меню на 'x'
 }
 
 modalOuter.addEventListener("click", cloceWindow);
@@ -16,15 +16,15 @@ mobileMenu.addEventListener("click", cloceWindow);
 function cloceWindow(e) {
   if (e.target.classList.contains("open")) {
     modalOuter.classList.remove("open");
-    btn.innerHTML = `<button id="menu-style">≡</button>`;
+    btn.innerHTML = `<button id="menu-style">≡</button>`; //возвращаем исходную кнопку
     btn.classList.remove("open"); //чтобы вернуть первоначальные стили
   }
 }
 
 /* счётчик */
 function getTimeRemaining(endtime) {
-  let t = Date.parse(endtime) - Date.parse(new Date());
-  let seconds = Math.floor((t / 1000) % 60);
+  let t = Date.parse(endtime) - Date.parse(new Date()); //пееводим в милисек, и вычитаем дату
+  let seconds = Math.floor((t / 1000) % 60); // переводим милисек в сек
   let minutes = Math.floor((t / 1000 / 60) % 60);
   let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
   let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -61,10 +61,10 @@ function initializeClock(id, endtime) {
   let timeinterval = setInterval(updateClock, 1000);
 }
 
-let deadline = "2020-07-31";
+let deadline = "2020-07-31"; // вводим число оканчания счётчика
 initializeClock("countdown", deadline);
 
-/*слайдер*/
+/*слайдер фото*/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -96,7 +96,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-/* второй слайдер галлерея*/
+/* второй слайдер (галлерея афиши)*/
 let slideIndex2 = 1;
 showSlides2(slideIndex2);
 
