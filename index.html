@@ -23,17 +23,18 @@
             <div class="menu">
             <nav>
               <ul class="menuElements" >
-                <li class="menuEl"><a href="../#afisha">афiша</a></li>
-                <li class="menuEl"><a href="../#slider">фото</a></li>
-                <li class="menuEl"><a href="../#video">вiдео</a></li>
-                <li class="menuEl"><a href="../#">контакти</a></li>
+                <li class="menuEl"><a href="./#afisha">афiша</a></li>
+                <li class="menuEl"><a href="./#slider">фото</a></li>
+                <li class="menuEl"><a href="./#video">вiдео</a></li>
+                <li class="menuEl"><a href="./#contact">контакти</a></li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="mobile-menu"  id="menu"> <button id="menu-style">≡</button></div>
-        <div class="header__title" id="top"><h2>MRPL City fest</h2></div>
+        <div class="header__title" id="top"><h2><a href="./#">MRPL City fest</a></h2></div>
       </div>
+      <!--Счётчик-->
       <div class="header__countdown">
         <div class="countdown">
           <h4 class="countdown-title"><b>ДО MRPL FEST ЗАЛИШИЛОСЬ</b></h4>
@@ -61,6 +62,7 @@
         <h5><span>ЗАПРОШУЕМО НА СВЯТКУВАННЯ</span></h5>
       </div>
     </header>
+    <!-- Блок с текстом -->
     <div class="content">
       <div class="content__description">
         <span class="content__span">
@@ -75,7 +77,7 @@
         </span>
       </div>
 
-
+      <!-- Слайдер галлерея с афишам--> 
       <div class="container2" id="afisha">
         <div class="mySlides2">
           <img src="./img/maruv.jpeg" style="width:100%">
@@ -94,15 +96,12 @@
         </div>
         <div class="mySlides2">
           <img src="./img/noize-mc.jpg" style="width:100%">
-        </div>
-          
+        </div> 
         <a class="prev2" onclick="plusSlides2(-1)">❮</a>
         <a class="next2" onclick="plusSlides2(1)">❯</a>
-      
         <div class="caption-container2">
           <p id="caption2"></p>
         </div>
-      
         <div class="row">
           <div class="column2">
             <img class="demo2 cursor2" src="./img/maruv.jpeg" style="width:100%" onclick="currentSlide2(1)" alt="На MRPL City fest 2020 на тебе чекає <br><h2>Maruv</h2>">
@@ -125,32 +124,26 @@
         </div>
       </div>
 
-
+        <!--Слайдер с фото-->
       <div class="slideshow-container" id="slider">
         <div class="mySlides fade">
           <img src="img/94kkqin5ubilr7f1.jpg" style="width:100%" />
-
         </div>
         <div class="mySlides fade">
           <img src="img/9ndgc1xnk160viyt.jpg" style="width:100%" />
-
         </div>
         <div class="mySlides fade">
           <img src="img/maxresdefault.jpg" style="width:100%" />
-
         </div>
         <div class="mySlides fade">
           <img src="img/p4rr5idlwbzxukip.jpg" style="width:100%" />
-
         </div>
         <div class="mySlides fade">
           <img src="img/Y5gOgfnyoOXGNO4Ep5cV.jpg" style="width:100%" />
-
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-
       <div
         style="text-align:center; background-color:#000000b3;border-bottom: outset 6px #73b8e6de;"
       >
@@ -160,6 +153,7 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
       </div>
+      <!-- Видео-->
       <div class="carousel" id="video">
         <div><iframe src="//www.youtube.com/embed/yg7mhc7h6GA?rel=0" allowfullscreen frameborder="0" name="slider1"></iframe></div>
         <span>
@@ -170,11 +164,21 @@
           <a href="//www.youtube.com/embed/E-gjqFrFf9U?rel=0&autoplay=1" target="slider1"><img src="//img.youtube.com/vi/E-gjqFrFf9U/default.jpg"></a>
         </span>
       </div>
-
-
-
-
- 
+      <!--Форма обратной связи-->
+      <title>Форма обратной связи на PHP с отправкой на почту</title>
+      <div class="texbox" id="contact">
+      <form action="./mail.php" method="post">
+      <fieldset>
+      <legend>Залишити повiдомлення:</legend>
+      <!--Устанавливаем текстовые поля ввода:-->
+      <input type="text" name="name" placeholder="Ваше iм'я">
+      <input type="text" name="email" placeholder="E-mail">
+      <input type="text" name="phone" placeholder="Телефон">
+      <textarea rows="10" cols="20" name="message"  placeholder="Повiдомлення"></textarea>>
+      <input type="submit" class="button10" value="Надiслати">
+      </fieldset>
+      </form>
+    </div>
 
 
     </div>

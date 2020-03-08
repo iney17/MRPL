@@ -164,6 +164,9 @@ header {
   -webkit-text-fill-color: transparent;
   font-size: 20px;
 }
+.header__title a {
+  text-decoration: none;
+}
 .header__countdown {
   padding-bottom: 20px;
   color: white;
@@ -354,12 +357,10 @@ img {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active,
 .dot:hover {
   background-color: #a419d7ed;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -415,9 +416,7 @@ img {
 .carousel span {
   display: inline-block;
   word-spacing: 1em; /* расстояние между картинками */
-
-  /* прокрутка миниатюр при необходимости */
-  overflow: auto;
+  overflow: auto; /* прокрутка миниатюр при необходимости */
   white-space: nowrap;
   word-wrap: normal;
 }
@@ -525,9 +524,6 @@ img {
   padding: 2px 16px;
   color: white;
 }
-/*.row {
-  background-color: #000000d9;
-}*/
 .row:after {
   content: "";
   display: table;
@@ -548,4 +544,56 @@ img {
 .active2,
 .demo2:hover {
   opacity: 1;
+}
+/*обратная связь*/
+.texbox {
+  background-color: #000000d9;
+  padding: 20px 0 40px 0;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  align-items: center;
+}
+input,
+optgroup,
+select,
+textarea {
+  margin: 5px !important;
+  border-radius: 8px;
+}
+legend {
+  color: #fff !important;
+  font-size: 22px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+.button10 {
+  display: inline-block;
+  color: black;
+  font-size: 125%;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.25em 0.5em;
+  outline: none;
+  border: 1px solid rgb(250, 172, 17);
+  border-radius: 7px;
+  background: rgb(255, 212, 3)
+    linear-gradient(rgb(255, 212, 3), rgb(248, 157, 23));
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0),
+    inset 0 1px 2px rgba(0, 0, 0, 0), inset 0 0 0 60px rgba(255, 255, 0, 0);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.button10:hover {
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0),
+    inset 0 1px 2px rgba(0, 0, 0, 0), inset 0 0 0 60px rgba(255, 255, 0, 0.5);
+}
+.button10:active {
+  padding: calc(0.25em + 1px) 0.5em calc(0.25em - 1px);
+  border-color: rgba(177, 159, 0, 1);
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 0 60px rgba(255, 255, 0, 0.45);
 }
