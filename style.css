@@ -87,6 +87,7 @@ header {
   display: flex;
   padding: 0 10px 0 10px;
   font-size: 20px;
+  line-height: 2;
 }
 .menuEl a {
   color: rgb(247, 243, 243);
