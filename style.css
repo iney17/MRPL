@@ -433,7 +433,7 @@ img {
 }
 .carousel span {
   display: inline-block;
-  word-spacing: 1em; /* расстояние между картинками */
+  word-spacing: 0.7em; /* расстояние между картинками */
   overflow: auto; /* прокрутка миниатюр при необходимости */
   white-space: nowrap;
   word-wrap: normal;
