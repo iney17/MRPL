@@ -350,7 +350,7 @@ img {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(117, 76, 232, 0.6);
 }
 
 /* Caption text 
@@ -532,7 +532,7 @@ img {
 /* On hover, add a black background color with a little bit see-through */
 .prev2:hover,
 .next2:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(117, 76, 232, 0.6);
 }
 
 /* Container for image text */
