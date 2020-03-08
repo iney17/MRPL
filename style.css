@@ -6,6 +6,11 @@
 html {
   scroll-behavior: smooth;
 }
+.up {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+}
 @media (max-width: 991px) {
   .modal-outer {
     display: grid;
