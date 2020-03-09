@@ -587,6 +587,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   width: 40%;
+  border-radius: 20px;
   margin: auto;
   align-items: center;
 }
