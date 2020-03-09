@@ -136,10 +136,10 @@ $(document).ready(function() {
   /*ПРОВЕРЯЕМ НАЖАТА ЛИ КНОПКА ОТПРАВКИ*/
   $("#btn_submit").click(function() {
     // собираем данные с формы
-    var user_name = $("#name").val();
-    var user_email = $("#email").val();
-    var user_phone = $("#phone").val();
-    var text_comment = $("#text_comment").val();
+    let user_name = $("#name").val();
+    let user_email = $("#email").val();
+    let user_phone = $("#phone").val();
+    let text_comment = $("#text_comment").val();
     // отправляем данные
     $.ajax({
       url: "./send.php", // куда отправляем
