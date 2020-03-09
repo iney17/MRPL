@@ -594,7 +594,8 @@ input,
 optgroup,
 select,
 textarea {
-  border-radius: 8px;
+  border-radius: 7px;
+  padding-left: 5px;
   margin: 5px auto 5px auto !important;
 }
 legend {
