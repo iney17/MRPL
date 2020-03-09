@@ -588,6 +588,7 @@ fieldset {
   flex-direction: column;
   width: 40%;
   border-radius: 20px;
+  border-color: purple;
   margin: auto;
   align-items: center;
 }
