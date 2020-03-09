@@ -129,3 +129,42 @@ function showSlides2(n) {
   dots2[slideIndex2 - 1].className += " active2";
   captionText.innerHTML = dots2[slideIndex2 - 1].alt;
 }
+
+/* форма обратной связи*/
+
+$(document).ready(function() {
+  /*ПРОВЕРЯЕМ НАЖАТА ЛИ КНОПКА ОТПРАВКИ*/
+  $("#btn_submit").click(function() {
+    // собираем данные с формы
+    var user_name = $("#name").val();
+    var user_email = $("#email").val();
+    var user_phone = $("#phone").val();
+    var text_comment = $("#text_comment").val();
+    // отправляем данные
+    $.ajax({
+      url: "./send.php", // куда отправляем
+      type: "post", // метод передачи
+      data: {
+        // что отправляем
+        name: user_name,
+        email: user_email,
+        phone: user_phone,
+        text_comment: text_comment
+      },
+      error: function() {
+        $("#erconts").html("Произошла ошибка!");
+      },
+      /* если произойдет ошибка в элементе с id erconts выведится сообщение*/
+
+      beforeSend: function() {
+        $("#erconts").html("Отправляем данные...");
+      },
+      success: function(result) {
+        /* В случае удачной обработки и отправки выполнится следующий код*/
+
+        $("#erconts").html(result);
+        console.log("ntcn");
+      }
+    });
+  });
+});

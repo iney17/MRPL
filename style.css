@@ -86,12 +86,11 @@ header {
 .menuEl {
   display: flex;
   padding: 0 10px 0 10px;
-  font-size: 20px;
   line-height: 2;
+  text-transform: uppercase;
 }
 .menuEl a {
   color: rgb(247, 243, 243);
-  font-size: larger;
   text-decoration: none;
 }
 .menuEl a:hover {
@@ -136,9 +135,12 @@ header {
     flex-direction: column;
     position: fixed;
     top: 10%;
+    left: 35%;
+  }
+  .menuEl {
+    font-size: 20px;
   }
 }
-
 @media (max-width: 740px) {
   .header {
     min-width: 300px;
@@ -166,6 +168,17 @@ header {
   }
   .header__countdown {
     margin-top: 11em;
+  }
+  .menuEl {
+    font-size: 14px;
+    margin-top: 10px;
+    border-color: #c6c3c3;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px 20px;
+  }
+  .menuEl:hover {
+    border-color: rgb(247, 243, 243);
   }
 }
 .header__title {
@@ -566,7 +579,7 @@ img {
   opacity: 1;
 }
 /*обратная связь*/
-.texbox {
+.form {
   background-color: #000000d9;
   padding: 20px 0 40px 0;
 }
@@ -590,7 +603,7 @@ legend {
   padding-left: 5px !important;
   padding-right: 5px !important;
 }
-.button10 {
+#btn_submit {
   display: inline-block;
   color: #ddc4c4;
   font-size: 125%;
@@ -607,13 +620,32 @@ legend {
     inset 0 1px 2px rgba(0, 0, 0, 0), inset 0 0 0 60px rgba(255, 255, 0, 0);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
-.button10:hover {
+#btn_submit:hover {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0),
     inset 0 1px 2px rgba(0, 0, 0, 0), inset 0 0 0 60px rgba(167, 48, 157, 0.74);
 }
-.button10:active {
+#btn_submit:active {
   padding: calc(0.25em + 1px) 0.5em calc(0.25em - 1px);
   border-color: rgb(168, 64, 142);
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1),
     inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 0 60px rgb(218, 6, 200);
+}
+
+#name,
+#phone,
+#email,
+#text_comment {
+  width: 300px;
+}
+@media (max-width: 334px) {
+  #name,
+  #phone,
+  #email,
+  #text_comment {
+    width: 200px;
+  }
+}
+#erconts {
+  color: #fff;
+  text-align: center;
 }

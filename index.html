@@ -169,29 +169,33 @@
         </span>
       </div>
       <!--Форма обратной связи-->
-      <title>Форма обратной связи на PHP с отправкой на почту</title>
-      <div class="texbox" id="contact">
-      <form action="./mail.php" method="post">
+      <div class="form" id="contact">
+      <form>
       <fieldset>
       <legend>Залишити повiдомлення:</legend>
       <!--Устанавливаем текстовые поля ввода:-->
-      <input type="text" name="name" placeholder="Ваше iм'я">
-      <input type="text" name="email" placeholder="E-mail">
-      <input type="text" name="phone" placeholder="Телефон">
-      <textarea rows="10" name="message"  placeholder="Повiдомлення"></textarea>
-      <input type="submit" class="button10" value="Надiслати">
+      <input type="text" id="name"  placeholder="Ваше iм'я" value="">
+      <input type="email" id="email"  placeholder="E-mail" value="">
+      <input  id="phone"  placeholder="Телефон">
+      <textarea rows="10" id="text_comment"  placeholder="Повiдомлення"></textarea>
+      <input type="button" value="Надiслати" id="btn_submit" />   
+      <div id="erconts"></div>
       </fieldset>
+
       </form>
+      
       </div>
       <div id="map" >
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3845.040257664386!2d37.48759508560466!3d47.043094861218584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1583704476629!5m2!1sru!2sua" style="border:0" allowfullscreen="" width="100%" height="450" frameborder="0"></iframe>
       </div>
-       </div>
+   </div>
      <a href="#top" class="up">
         <div class="ups">
           <img src="./img/up.png"/>
         </div>
       </a>
-    <script src="./script.js "></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="./script.js "></script>
+
   </body>
 </html>
